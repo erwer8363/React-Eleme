@@ -1,3 +1,0 @@
-
-const CHECK_USER_INFO = "CHECK_USER_INFO"
-export { CHECK_USER_INFO }

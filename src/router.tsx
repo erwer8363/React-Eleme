@@ -9,7 +9,7 @@ import User from "@/components/pages/Mine/User";
 import FindList from "@/components/pages/Find/findList";
 import Cities from "@/components/pages/Home/CityList";
 import HomeDetail from "@/components/pages/Home/HomeDetail";
-import MineIndex from "@/components/pages/Mine/mineIndex.tsx";
+import MineIndex from "@/components/pages/Mine/MineIndex";
 import HdOrder from "@/components/pages/Home/HomeDetail/HPage/Order";
 import HdBusiness from "@/components/pages/Home/HomeDetail/HPage/Business";
 import HdComment from "@/components/pages/Home/HomeDetail/HPage/Comment";

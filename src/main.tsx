@@ -14,6 +14,17 @@ import store from "./store"
 // import "video-react/dist/video-react.css";
 import {createRoot} from "react-dom/client";
 import {router} from "@/router";
+import {unstableSetRender} from "antd-mobile";
+
+unstableSetRender((node, container: any) => {
+    container._reactRoot ||= createRoot(container)
+    const root = container._reactRoot
+    root.render(node)
+    return async () => {
+        await new Promise((resolve) => setTimeout(resolve, 0))
+        root.unmount()
+    }
+})
 
 createRoot(document.getElementById('root')!).render(
     <Provider store={store}>

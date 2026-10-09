@@ -1,8 +1,9 @@
-import {useSelector} from "react-redux";
 import {Navigate} from "react-router-dom";
+import {useAtomValue} from "jotai";
+import {userInfoAtom} from "@/atoms/mine.ts";
 
 const MineIndex = () => {
-    const userInfo = useSelector((s: any) => s.getIn(['mine', 'userInfo']));
+    const userInfo = useAtomValue(userInfoAtom);
     return <Navigate to={userInfo ? 'user' : 'login'} replace/>
 }
 export default MineIndex
