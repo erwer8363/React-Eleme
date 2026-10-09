@@ -44,7 +44,7 @@ class NavBar extends Component {
         return (
             navs.map(item => {
                 return (
-                    <NavLink key={item.id} to={item.path} exact={item.exact}>
+                    <NavLink key={item.id} to={item.path}>
                         <div className={"headerItem " + item.name + " " + (item.id === activeItem ? "active" : "")}
                              onClick={this.handleClick}>
                             <i className={"fa fa-" + item.icon}></i>
@@ -69,8 +69,8 @@ class NavBar extends Component {
 
 NavBar.defaultProps = {
     navs: [
-        {id: 1, path: "/find/coin", icon: "usd", exact: false, title: "金币", name: "coin"},
-        {id: 2, path: "/find/record", icon: "file-o", exact: false, title: "兑换记录", name: "record"}
+        {id: 1, path: "/find/coin", icon: "usd", title: "金币", name: "coin"},
+        {id: 2, path: "/find/record", icon: "file-o", title: "兑换记录", name: "record"}
     ]
 }
 export default withRouter(GroupState(NavBar, {
