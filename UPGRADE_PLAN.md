@@ -23,7 +23,7 @@
 
 ### 已知的 React 19 阻塞点
 
-- `ReactDOM.render`（`src/index.js`）→ 已移除，改 `createRoot`
+- `ReactDOM.render`（`src/main.tsx`）→ 已移除，改 `createRoot`
 - `componentWillReceiveProps` × 5：`App.js`、`Home/dinner`、`Home/dinnerResList`、`Find/NavBar`、`Mine`
 - 字符串 ref：`Find/findList` 里 `<Player ref="player">`
 - `defaultProps`：`App`、`AppFooter`、`NavBar`。class 组件还能用，函数组件已移除，改成默认参数
@@ -61,7 +61,7 @@
 - [ ] 删除：`config/`、`scripts/`、`yarn.lock`、`docs/`（在线手册，旧构建产物，可留可删，先留）
 - [ ] 新 `package.json`：只放最小依赖（react、react-dom、react-router-dom、jotai、axios、sass、swiper、antd-mobile、vite 系列）
 - [ ] `public/index.html` → 根目录 `index.html`，加 `<script type="module" src="/src/main.tsx">`
-- [ ] `src/index.js` → `src/main.tsx`（`createRoot`）
+- [ ] `src/main.tsx` → `src/main.tsx`（`createRoot`）
 
 验收：空白页能起，控制台无报错。
 
